@@ -1,0 +1,6 @@
+/* $Id: ui.progressbar.css 6875 2010-05-13 00:31:07Z jablko $ */
+
+/* Progressbar
+----------------------------------*/
+.ui-progressbar { height:2em; text-align: left; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }

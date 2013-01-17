@@ -1,0 +1,12 @@
+/* $Id: image-rtl.css 6875 2010-05-13 00:31:07Z jablko $ */
+
+/**
+ * Image upload widget.
+ */
+div.image-preview {
+  float: right; /* RTL */
+  padding: 0 0 10px 10px; /* RTL */
+}
+div.image-widget-data {
+  float: right; /* RTL */
+}

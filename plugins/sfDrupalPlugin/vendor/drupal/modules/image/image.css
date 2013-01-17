@@ -1,0 +1,15 @@
+/* $Id: image.css 6875 2010-05-13 00:31:07Z jablko $ */
+
+/**
+ * Image upload widget.
+ */
+div.image-preview {
+  float: left; /* RTL */
+  padding: 0 10px 10px 0; /* RTL */
+}
+div.image-widget-data {
+  float: left; /* RTL */
+}
+div.image-widget-data input.text-field {
+  width: auto;
+}
