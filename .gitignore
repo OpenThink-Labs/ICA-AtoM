@@ -4,6 +4,7 @@ web/uploads/*
 config/databases.yml
 config/propel.ini
 data/sql/*
+data/index/*
 lib/filter/doctrine/base/Base*
 lib/filter/doctrine/*Plugin/base/Base*
 lib/form/doctrine/base/Base*
