@@ -27,7 +27,7 @@ class StaticPageIndexAction extends sfAction
     {
       $title = $this->context->i18n->__('Untitled');
     }
-    
+
     $this->response->setTitle("$title - {$this->response->getTitle()}");
 
     // HACK factor this into routing one day?
@@ -40,45 +40,46 @@ class StaticPageIndexAction extends sfAction
 
       case $this->resource instanceof QubitDonor:
         $this->forward('donor', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitRightsHolder:
         $this->forward('rightsholder', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitUser:
         $this->forward('user', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitActor:
         $this->forward('sfIsaarPlugin', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitFunction:
         $this->forward('sfIsdfPlugin', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitInformationObject:
         $this->forward('sfIsadPlugin', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitAccession:
         $this->forward('accession', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitDeaccession:
         $this->forward('deaccession', 'index');
-        
+
         break;
 
       case $this->resource instanceof QubitStaticPage:
+
         break;
 
       default:
