@@ -155,6 +155,7 @@ class sfIsadPlugin implements ArrayAccess
   public static function eventTypes()
   {
     return array(QubitTerm::getById(QubitTerm::CREATION_ID),
-      QubitTerm::getById(QubitTerm::ACCUMULATION_ID));
+      QubitTerm::getById(QubitTerm::ACCUMULATION_ID),
+      QubitTerm::getById(QubitTerm::RETENTION_ID));
   }
 }

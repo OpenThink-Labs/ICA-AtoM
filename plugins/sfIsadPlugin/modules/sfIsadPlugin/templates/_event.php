@@ -31,20 +31,20 @@
             <div class="animateNicely">
               <input name="<?php echo $form->getWidgetSchema()->generateName('id') ?>" type="hidden" value="<?php echo url_for(array($item, 'module' => 'event')) ?>"/>
               <?php $save = $form->type->choices; $form->type->choices += array(url_for(array($item->type, 'module' => 'term')) => $item->type); ?> 
-              <?php echo $form->getWidgetSchema()->renderField('type', url_for(array($item->type, 'module' => 'term'))); ?> 
+              <?php echo $form->getWidgetSchema()->renderField('type', url_for(array($item->type, 'module' => 'term')), array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')); ?> 
               <?php $form->type->choices = $save ?>
             </div>
           </td><td>
             <div class="animateNicely">
-              <?php echo $form->getWidgetSchema()->renderField('date', $item->getDate(array('cultureFallback' => true))) ?>
+              <?php echo $form->getWidgetSchema()->renderField('date', $item->getDate(array('cultureFallback' => true)), array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')) ?>
             </div>
           </td><td>
             <div class="animateNicely">
-              <?php echo $form->getWidgetSchema()->renderField('startDate', Qubit::renderDate($item->startDate)) ?>
+              <?php echo $form->getWidgetSchema()->renderField('startDate', Qubit::renderDate($item->startDate), array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')) ?>
             </div>
           </td><td>
             <div class="animateNicely">
-              <?php echo $form->getWidgetSchema()->renderField('endDate', Qubit::renderDate($item->endDate)) ?>
+              <?php echo $form->getWidgetSchema()->renderField('endDate', Qubit::renderDate($item->endDate), array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')) ?>
             </div>
           </td><td style="text-align: right">
             <div class="animateNicely">
@@ -63,11 +63,11 @@
             <?php echo $form->type ?>
           </div>
         </td><td>
-          <?php echo $form->date ?>
+          <?php echo $form->getWidgetSchema()->renderField('date', "", array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')) ?>
         </td><td>
-          <?php echo $form->startDate ?>
+          <?php echo $form->getWidgetSchema()->renderField('startDate', "", array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')) ?>
         </td><td>
-          <?php echo $form->endDate ?>
+          <?php echo $form->getWidgetSchema()->renderField('endDate', "", array('class'=>'date-widget', 'icon' => image_path('calendar.png'), 'size'=>'8px')) ?>
         </td><td>
           &nbsp;
         </td>

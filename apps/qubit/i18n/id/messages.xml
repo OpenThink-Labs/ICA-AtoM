@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="EN" target-language="id" datatype="plaintext" original="messages" date="2012-08-27T09:00:48Z" product-name="messages">
+  <file source-language="EN" target-language="id" datatype="plaintext" original="messages" date="2013-03-02T23:30:27Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
@@ -1056,7 +1056,7 @@
       </trans-unit>
       <trans-unit id="594">
         <source>Identifier</source>
-        <target/>
+        <target>No Dokumen</target>
         <note>http://code.google.com/p/qubit-toolkit/source/browse/trunk/apps/qubit/modules/informationobject/templates/_childLevels.php</note>
       </trans-unit>
       <trans-unit id="605">

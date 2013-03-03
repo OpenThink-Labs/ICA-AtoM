@@ -35,6 +35,7 @@ class QubitTerm extends BaseTerm
 
     // Event type taxonomy
     CREATION_ID = 111,
+    RETENTION_ID = 610,
     CUSTODY_ID = 113,
     PUBLICATION_ID = 114,
     CONTRIBUTION_ID = 115,
