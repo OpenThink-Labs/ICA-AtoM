@@ -30,7 +30,9 @@
           <td>
             <div class="animateNicely">
               <input name="<?php echo $form->getWidgetSchema()->generateName('id') ?>" type="hidden" value="<?php echo url_for(array($item, 'module' => 'event')) ?>"/>
-              <?php $save = $form->type->choices; $form->type->choices += array(url_for(array($item->type, 'module' => 'term')) => $item->type); echo $form->getWidgetSchema()->renderField('type', url_for(array($item->type, 'module' => 'term'))); $form->type->choices = $save ?>
+              <?php $save = $form->type->choices; $form->type->choices += array(url_for(array($item->type, 'module' => 'term')) => $item->type); ?> 
+              <?php echo $form->getWidgetSchema()->renderField('type', url_for(array($item->type, 'module' => 'term'))); ?> 
+              <?php $form->type->choices = $save ?>
             </div>
           </td><td>
             <div class="animateNicely">
