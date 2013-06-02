@@ -271,3 +271,20 @@ function check_field_visibility($fieldName)
 {
   return sfContext::getInstance()->user->isAuthenticated() || sfConfig::get($fieldName, false);
 }
+
+function get_physical_storage($id="") {
+	$physicalObjects = array();
+	foreach (QubitRelation::getRelatedSubjectsByObjectId('QubitPhysicalObject', $id, array('typeId' => QubitTerm::HAS_PHYSICAL_OBJECT_ID)) as $item)
+	{
+		$physicalObjects[$item->id] = $item;
+	}
+
+   $html = "<ul>";
+   foreach ($physicalObjects as $item):
+     $html .= "<li>{$item->type}</li>" ;
+     $html .= link_to_if(QubitAcl::check($resource, 'update'), render_title($item), array($item, 'module' => 'physicalobject')) ;
+     $html .= $item->getLocation(array('cultureFallback' => 'true'));
+   endforeach;
+
+   return $html ;
+}

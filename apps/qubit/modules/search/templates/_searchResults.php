@@ -83,6 +83,8 @@
       <?php if ($doc->collectionRootSlug !== $doc->slug): ?>
         <?php echo render_show(__('Part of'), link_to(render_title($doc->partOf), array('slug' => $doc->collectionRootSlug, 'module' => 'informationobject'))) ?>
       <?php endif; ?>
+  
+     <?php echo render_show(sfConfig::get('app_ui_label_physicalobject'), get_physical_storage($doc->id)); ?>
 
     </div>
   <?php endforeach; ?>
